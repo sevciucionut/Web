@@ -1,0 +1,74 @@
+<% include partials/header %>
+
+
+<div id="spatiu">
+<div class="row row-cols-1 row-cols-md-3">
+
+
+	<div id="grila_produse" class="selectare_sortare" name="selectare_sortare">
+
+		<div class="dropdown">
+		  <button class="dropbtn">Sortare dupa:</button>
+		  <div class="dropdown-content">
+			  <a class="ala" href="#" data-name="l2h">Pret ascendent</a>
+			  <a class="ala" href="#" data-name="h2l">Pret descendent</a>
+			  <a class="ala" href="#" data-name="name-a-z">Nume A-Z</a>
+			  <a class="ala" href="#" data-name="name-z-a">Nume Z-A</a>
+		  </div>
+		</div>
+	</div>
+	
+	
+	
+	<div id="produse">
+		<div class="row row-cols-1 row-cols-md-3 products-grid">
+			
+			
+			<% for (var i = 0; i < prd.length; i = i + 1) {%>
+			
+
+			<div id="doar4" data-price="<%= prd[i][6] %>" class="produs <%= prd[i][7] %>" data-name="<%= prd[i][1] %>">
+				<div class="col mb-4">
+					<div class="card h-100">
+					
+					<form action="/pagina" method="POST">
+						<input name="e" value="<%=i%>" class="hide"></input>
+						<button >	
+							<img src="<%= prd[i][0] %>" class="card-img-top">
+						</button>
+					</form>
+					
+						<div class="card-body">
+						
+							<form action="/adgcos" method="POST">
+							
+								<h3 class="card-title" name="b"><%= prd[i][1] %></h3>
+								<li id="specificatii"><%= prd[i][2] %></li>
+								<li id="specificatii"><%= prd[i][3] %></li>
+								<li id="specificatii"><%= prd[i][4] %></li>
+								<li id="specificatii"><%= prd[i][5] %></li>
+								<input name="c" value="<%=i%>" class="hide"></input>
+								<a id="pret"><%= prd[i][6] %> Lei</a>
+								<button class="btn btn-primary">Cumpara</button>
+							
+							</form>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<% }%>
+			
+
+
+			
+			
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<% include partials/footer %>

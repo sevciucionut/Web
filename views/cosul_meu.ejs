@@ -1,0 +1,57 @@
+<% include partials/header %>
+
+
+<link rel="stylesheet" type="text/css" href="/style_cos.css">
+<script src="js_cos.js"></script>
+
+
+
+
+        <section class="container content-section">
+            <h2 class="section-header">COSUL MEU</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+			
+			<% for (var i = 0; i < cos.length; i = i + 1) { %>
+			
+				<div class="cart-row">
+					<div class="cart-item cart-column">
+						<img class="cart-item-image" src="<%= cos[i][0] %>" width="100" height="100">
+						<span class="cart-item-title"><%= cos[i][1] %></span>
+					</div>
+					<span class="cart-price cart-column"><%= cos[i][6] %>Lei</span>
+					<div class="cart-quantity cart-column">
+						<input class="cart-quantity-input" type="number" value="1">
+						
+						<form action="/remove" method="POST">
+							<input name="d" value="<%= i %>" class="hide"></input>
+							<button class="btn btn-primary" style="background-color: red">REMOVE</button>
+						</form>
+							
+					</div>
+				</div>
+				
+			<% } %>
+			
+			
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total (fara cost livrare):</strong>
+                <span class="cart-total-price">0Lei</span><br>
+				<strong class="cart-total-title">Cost livrare:</strong>
+                <span class="cart-total-price transport">0Lei</span>
+            </div>
+			<form action="/cmd" method="POST">
+				<input name="finala" value="0" id="nrTotal" class="hide"></input>
+				<input name="finala" value="0" id="sumaTotala" class="hide"></input>
+				<button class="btn btn-primary">CUMPARA</button>
+			</form>
+        </section>
+
+
+
+<% include partials/footer %>

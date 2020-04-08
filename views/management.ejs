@@ -1,0 +1,98 @@
+<% include partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+		<h2>Creeaza si adauga un produs</h2>
+		<h5>
+			<form action="/adgproduse" method="POST">
+					<label>SRC imagine:</label>
+					<input class="form-control img1" type="text" name="a"/><br/>
+				
+					<label>Denumire laptop:</label>
+					<input class="form-control nume1" type="text" name="a"/><br/>
+				
+					<label>Specificatia 1:</label>
+					<input class="form-control spf1" type="text" name="a"/><br/>
+				
+					<label>Specificatia 2:</label>
+					<input class="form-control spf2" type="text" name="a"/><br/>
+				
+					<label>Specificatia 3:</label>
+					<input class="form-control spf3" type="text" name="a"/><br/>
+				
+					<label>Specificatia 4:</label>
+					<input class="form-control spf4" type="text" name="a"/><br/>
+				
+					<label>Pret:</label>
+					<input class="form-control prt1" type="text" name="a"/><br/>
+				
+					<label>Hide/Visible</label>
+					<input class="form-control prt1" type="text" name="a"/><br/>
+				
+					<button type="button" class="btn btn-primary adauga">Verifica produsul</button>
+					<button class="btn btn-primary">Adauga produsul</button>
+
+			</form>
+		</h5>
+	</div>
+    
+	<div id="savedem2" class="col-3">
+	
+	
+			<div id="doar1" data-price="3250" class="produs" data-name="Lenovo ThinkPad E490">
+				<div class="col mb-4">
+					<div class="card h-100">
+							<img src="Lenovo ThinkPad E490.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h3 class="card-title">Lenovo ThinkPad E490</h3>
+							<li class="1" id="specificatii">Procesor: intel core i5-1035G4</li>
+							<li class="2" id="specificatii">Memorie RAM: 16GB</li>
+							<li class="3" id="specificatii">Memorie SSD: 512GB</li>
+							<li class="4" id="specificatii">Placa video: NVIDIA GeForce MX130</li>
+							<a id="pret">3250 Lei</a>
+							<button type="button" class="btn btn-primary">Cumpara</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	
+	
+	
+	
+	</div>
+  </div>
+  
+  
+		<h2>Dezactiveaza un produs</h2>
+		<h5>
+			<form action="/dezact" method="POST">
+					<label>Denumire laptop:</label>
+					<input class="form-control nume1" type="text" name="dez"/><br/>
+					<button class="btn btn-primary">Dezactiveaza</button>
+			</form>
+		</h5>
+
+  
+  
+		<h2>Activeaza un produs</h2>
+		<h5>
+			<form action="/act" method="POST">
+					<label>Denumire laptop:</label>
+					<input class="form-control nume1" type="text" name="act"/><br/>
+					<button class="btn btn-primary">Activeaza</button>
+			</form>
+		</h5>
+
+  
+  
+  
+</div>
+
+
+<div class="container vede">
+</div>
+
+<% include partials/footer %>
+ 

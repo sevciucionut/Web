@@ -1,0 +1,99 @@
+<% include partials/header %>
+	
+	
+<div class="container">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+
+			<div class="item active text-center">
+				<form action="/pagina" method="POST">
+					<input name="e" value="6" class="hide"></input>
+					<button >	
+						<img src="img1.jpg" alt="Laptop1" width="960" height="450">
+					</button>
+				</form>		
+				<% %>
+					<script>
+						$(".carousel-inner").animate({
+						  height: '+=150px',
+						  width: '+=150px'
+						});
+						$(".carousel-inner").animate({
+						  height: '-=150px',
+						});
+						$(".carousel-inner").animate({
+						  width: '-=150px'
+						});
+					</script>
+				<% %>
+				
+			</div>
+
+			<div class="item text-center">
+				<form action="/pagina" method="POST">
+					<input name="e" value="1" class="hide"></input>
+					<button >	
+						<img src="img2.jpg" alt="Laptop2" width="960" height="450">
+					</button>
+				</form>		
+				
+			</div>
+		
+			<div class="item text-center">
+				<form action="/pagina" method="POST">
+					<input name="e" value="0" class="hide"></input>
+					<button >	
+						<img src="img3.jpg" alt="Laptop3" width="960" height="450">
+					</button>
+				</form>		
+			</div>
+
+		</div>
+		
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+			<% %>
+				<script>
+				$(document).on('click', '.left', function() {
+				
+					$(".carousel-inner").animate({height: 'toggle'}, "slow");
+					$(".carousel-inner").animate({height: 'toggle'}, "slow");
+				});
+				</script>
+			<% %>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+			<% %>
+				<script>
+				$(document).on('click', '.right', function() {
+				
+					$(".carousel-inner").animate({
+					  width: '-=100%'
+					});
+					$(".carousel-inner").animate({
+					  width: '+=100%'
+					});
+				});
+				</script>
+			<% %>
+
+		</a>
+	</div>
+</div>
+
+
+
+<% include partials/footer %>

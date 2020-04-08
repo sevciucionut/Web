@@ -1,0 +1,45 @@
+<% include partials/header %>
+
+
+<div id="spatiu">
+<div class="row row-cols-1 row-cols-md-3">
+
+
+	
+	
+	
+	<div id="produse">
+		<div class="row row-cols-1 row-cols-md-3 products-grid">
+			
+			
+			<% for (var i = 0; i < ist.length; i = i + 1) {%>
+			
+
+			<div id="doar4" class="produs">
+				<div class="col mb-4">
+					<div class="card h-100">
+						<div class="card-body">													
+							<h3 class="card-title" name="b"><%= ist[i][2] %> <%= ist[i][3] %> </h3>
+							<li id="specificatii"><%= ist[i][4] %></li>
+							<li id="specificatii"><%= ist[i][0] %></li>
+							<li id="specificatii"><%= ist[i][1] %> Lei</li>						
+							<li id="specificatii"><%= ist[i][5] %></li>						
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<% }%>
+			
+
+
+			
+			
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<% include partials/footer %>

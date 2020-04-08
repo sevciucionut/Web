@@ -1,0 +1,107 @@
+<% include partials/header %>
+
+<div class="container">
+	
+	<h3><%= pr[1] %> cu procesor Intel® Core™ i5-1035G1 pana la 3.60GHz Ice Lake, 15.6", Full HD, 16GB, 512GB SSD, Nvidia GeForce MX130 2GB, Free DOS, Mineral Silver</h3>
+	
+	<div id="asezare">
+		
+		<div id="detalii">
+		<img src="<%= pr[0] %>" >
+		</div>
+		
+		<div id="detalii2">
+		<a id="pret2"><%= pr[6] %> Lei</a>
+		<br><br><br><br>
+		<form action="/add" method="POST">
+			<input name="f" value="<%= indice %>" class="hide"></input>
+			<button id="adauga" class="btn btn-primary">Adauga in cos</button>
+		</form>
+		</div>
+		
+	</div>
+	
+	
+	<h3>Specificatii:</h3>
+	
+	<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Procesor</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Producator procesor	</td>
+      <td>Intel®</td>
+    </tr>
+    <tr>
+      <td>Tip procesor	</td>
+      <td>i5</td>
+    </tr>
+    <tr>
+      <td>Model procesor	</td>
+      <td>1035g4</td>
+    </tr>
+    <tr>
+      <td>Arhitectura</td>
+      <td>Comet Lake</td>
+    </tr>
+    <tr>
+      <td>Numar nuclee	</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Frecventa nominala	</td>
+      <td>1 Ghz</td>
+    </tr>
+    <tr>
+      <td>Cache</td>
+      <td>6144 KB</td>
+    </tr>
+    <tr>
+      <td>Frecventa Turbo Boost	</td>
+      <td>3.6 GHz</td>
+    </tr>
+    <tr>
+      <td>Tehnologie procesor	</td>
+      <td>10 nm</td>
+    </tr>
+    <tr>
+      <td>Procesor grafic integrat	</td>
+      <td>Intel® UHD Graphics</td>
+    </tr>
+  </tbody>
+  
+  <thead>
+    <tr>
+      <th scope="col">Memorie</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <td>Capacitate memorie	</td>
+      <td>16 GB</td>
+    </tr>
+    <tr>
+      <td>Tip memorie</td>
+      <td>DDR4</td>
+    </tr>
+    <tr>
+      <td>Numar sloturi	</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Frecventa</td>
+      <td>2666 MHz</td>
+    </tr>
+  </tbody>
+  
+</table>
+	
+	
+</div>
+
+<% include partials/footer %>
